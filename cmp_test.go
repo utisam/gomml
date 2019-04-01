@@ -32,7 +32,7 @@ func TestCmp(t *testing.T) {
 			y: map[int]int{
 				1: 1,
 			},
-			match: true,
+			match: false,
 		},
 	}
 	for _, tt := range tests {
