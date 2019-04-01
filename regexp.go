@@ -16,7 +16,7 @@ type regexpMatcher struct {
 // Example usage:
 //
 // 		dbMock.EXPECT().
-// 			Insert(gomml.Regexp("prefix-\\d+").
+// 			Insert(gomml.Regexp("^prefix-\\d+$").
 //
 func Regexp(pattern string) gomock.Matcher {
 	return &regexpMatcher{regexp.MustCompile(pattern)}

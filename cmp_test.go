@@ -43,3 +43,25 @@ func TestCmp(t *testing.T) {
 		})
 	}
 }
+
+func Test_cmpMatcher_String(t *testing.T) {
+	tests := []struct {
+		name string
+		x    interface{}
+		want string
+	}{
+		{
+			x: map[int]int{
+				1: 1,
+			},
+			want: "is equal to map[1:1] with Options{}",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := gomml.Cmp(t, tt.x).String(); got != tt.want {
+				t.Errorf("cmpMatcher.String() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

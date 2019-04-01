@@ -44,3 +44,23 @@ func TestBCrypt(t *testing.T) {
 		})
 	}
 }
+
+func Test_bcryptMatcher_String(t *testing.T) {
+	tests := []struct {
+		name     string
+		password []byte
+		want     string
+	}{
+		{
+			password: []byte("password"),
+			want:     "matches to password with bcrypt",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := gomml.BCrypt(tt.password).String(); got != tt.want {
+				t.Errorf("bcryptMatcher.String() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
