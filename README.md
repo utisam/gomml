@@ -1,2 +1,3 @@
-# gomml
-Library of GoMock's matchers
+# gomml: gomock matcher library
+
+`gomml` is a GoMock matcher library.
