@@ -26,8 +26,11 @@ func Now() gomock.Matcher {
 }
 
 func (m *nowMatcher) Matches(x interface{}) bool {
-	if t, ok := x.(time.Time); ok {
+	switch t := x.(type) {
+	case time.Time:
 		return m.start.Before(t) && t.Before(time.Now())
+	case *time.Time:
+		return m.start.Before(*t) && t.Before(time.Now())
 	}
 	return false
 }

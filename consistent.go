@@ -24,11 +24,7 @@ type consistentMatcher struct {
 // 		dbMock.EXPECT().
 // 			Insert(consistentNow, consistentNow).
 //
-func Consistent(o interface{}) gomock.Matcher {
-	m, ok := o.(gomock.Matcher)
-	if !ok {
-		m = gomock.Eq(o)
-	}
+func Consistent(m gomock.Matcher) gomock.Matcher {
 	return &consistentMatcher{m: m}
 }
 
