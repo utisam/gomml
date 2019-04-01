@@ -1,0 +1,10 @@
+language: go
+go:
+- "1.12.x"
+
+# Skipping the installation step
+install: true
+
+script:
+# Test and output coverage
+- "go test -race -coverprofile=coverage.txt -covermode=atomic -parallel 2 ./..."
