@@ -8,3 +8,11 @@ install: true
 script:
 # Test and output coverage
 - "go test -race -coverprofile=coverage.txt -covermode=atomic -parallel 2 ./..."
+
+deploy:
+# Send coverage to codecov
+- provider: script
+  skip_cleanup: true
+  script: "bash ./scripts/ci_codecov.sh"
+  on:
+    all_branches: true
