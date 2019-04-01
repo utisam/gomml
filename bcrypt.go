@@ -11,6 +11,15 @@ type bcryptMatcher struct {
 	password []byte
 }
 
+// BCrypt is a Matcher that matches if the hashed parameter to the mock
+// function is equivalent to the password.
+//
+// Example usage:
+//
+// 		dbMock.EXPECT().
+// 			Insert(gomml.BCrypt("password").
+// 			Return(errors.New("DB error"))
+//
 func BCrypt(password []byte) gomock.Matcher {
 	return &bcryptMatcher{password}
 }

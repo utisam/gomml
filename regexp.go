@@ -11,6 +11,13 @@ type regexpMatcher struct {
 	re *regexp.Regexp
 }
 
+// Regexp is a Matcher that matches with regexp.
+//
+// Example usage:
+//
+// 		dbMock.EXPECT().
+// 			Insert(gomml.Regexp("prefix-\\d+").
+//
 func Regexp(pattern string) gomock.Matcher {
 	return &regexpMatcher{regexp.MustCompile(pattern)}
 }

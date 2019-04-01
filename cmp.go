@@ -14,6 +14,13 @@ type cmpMatcher struct {
 	opts []cmp.Option
 }
 
+// Cmp is a Matcher that matches using go-cmp.
+//
+// Example usage:
+//
+// 		dbMock.EXPECT().
+// 			Insert(gomml.Cmp(&someComplex).
+//
 func Cmp(t *testing.T, want interface{}, opts ...cmp.Option) gomock.Matcher {
 	return &cmpMatcher{t, want, opts}
 }

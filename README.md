@@ -1,3 +1,5 @@
 # gomml: gomock matcher library
 
-`gomml` is a GoMock matcher library.
+[![GoDoc](https://godoc.org/github.com/utisam/gomml?status.svg)](https://godoc.org/github.com/utisam/gomml)
+
+`gomml` is a library of GoMock's matchers.
