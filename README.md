@@ -6,3 +6,13 @@
 [![GoDoc](https://godoc.org/github.com/utisam/gomml?status.svg)](https://godoc.org/github.com/utisam/gomml)
 
 `gomml` is a library of GoMock's matchers.
+
+
+
+* To expect bcrypted hash (`golang.org/x/crypto/bcrypt`)
+* To expect complex struct (`github.com/google/go-cmp/cmp`)
+* To check consistency of parameters
+* `time.Now()`
+* `regexp`
+
+See [examples](./examples/)
