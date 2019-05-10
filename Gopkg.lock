@@ -31,7 +31,7 @@
     "blowfish",
   ]
   pruneopts = "UT"
-  revision = "a5d413f7728c81fb97d96a2b722368945f651e78"
+  revision = "cbcb750295291b33242907a04be40e80801d0cfc"
 
 [solve-meta]
   analyzer-name = "dep"
