@@ -10,7 +10,7 @@
   version = "1.3.1"
 
 [[projects]]
-  digest = "1:1d1cbf539d9ac35eb3148129f96be5537f1a1330cadcc7e3a83b4e72a59672a3"
+  digest = "1:85af59d73a44bd58f524cf05dee34a5021afe1fa4a852079b535c38ae2d1a2e8"
   name = "github.com/google/go-cmp"
   packages = [
     "cmp",
@@ -20,8 +20,8 @@
     "cmp/internal/value",
   ]
   pruneopts = "UT"
-  revision = "2d0692c2e9617365a95b295612ac0d4415ba4627"
-  version = "v0.3.1"
+  revision = "9680bfaf28748393e28e00238d94070fb9972fd8"
+  version = "v0.5.1"
 
 [[projects]]
   branch = "master"
